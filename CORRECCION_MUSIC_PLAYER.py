@@ -3,7 +3,7 @@ import random
 
 def guardar():
     texto_correcto = f"""CONFIGURACION GUARDADA
-    Volumen: {numero_volumen}
+    Volumen: {slider.get()}%
     Calidad: {var.get()}
     Repetir: {"Sí" if var1.get() == True else "No"}
     Aleatorio: {"Sí" if var2.get() == True else "No"}
@@ -22,7 +22,6 @@ def boton1_def():
 
 def mover(valor):
     global numero_volumen
-    numero_volumen = valor
     etiqueta.config(text = f"Volumen: {valor}%")
     
 def mover_2(valor):
